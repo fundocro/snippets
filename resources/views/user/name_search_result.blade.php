@@ -27,51 +27,21 @@
 
     
     <h2>All Snippets Display:</h2>
+<div class="form-group" style="width:30%;">
 
 
-{{--
-        <div class="form-group" style="width:30%;">
-            {!!Form::label('search','Search:')!!}
-            {!!Form::text('search',null,['class'=>'form-control'])!!}
+    <form action="/search" method="POST" role="search">
+        {{ csrf_field() }}
+        <div class="input-group">
+            <input type="text" class="form-control" name="q"
+                placeholder="Search snippets"> <span class="input-group-btn">
+                <button type="submit" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
         </div>
-        <div class="form-group">
-            {!!Form::submit('Search Snippets',['class'=>'btn btn-primary'])!!}
-        </div>
---}}
-
-{{--
-        <form action="name_search.blade.php" method="post" class="form-inline">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btn-primary">
-                        </div>
-        </form>
---}}
-{{--need to make fucking controller and route--}}
-
-
-
-
-        
-    
-    <div class="col-sm-6" style="float: right;">
-        {!!Form::model($snippets,['method'=>'PATCH','action'=>['HomeController@update',$snippets->id]])!!}
-
-            <div>
-                {!!Form::label('body','Snippet Markup Display:')!!}
-                <div class="snip_disp" style="position:absolute;">
-                  {!!Form::textarea('body',null,['rows'=>23,'cols'=>70])!!}
-                    <div class="form-group">
-                     
-                    </div>
-                    
-                </div>    
-            </div>
-        
-        {!!Form::close()!!}
-    </div>
+    </form>
+</div>
 
     <div id="snippScroll">
         <style>#snippScroll{overflow-y:scroll;height:500px;background-color: #1325}</style>
@@ -86,10 +56,10 @@
                       </tr>
                     </thead>
 
-                    @if($all_snippets)
+                    @if($snippets)
 
                     <tbody>
-                         @foreach($all_snippets as $snippet)
+                         @foreach($snippets as $snippet)
                         <tr>
 
                             <td>{{$snippet->id}}</td>

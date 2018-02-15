@@ -55,12 +55,15 @@
                     @else
                         <li class="dropdown">
                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                                {{ Auth::user()->name }}welcome back it seems that you already logged in, proceed down to User Access/General <span class="caret"></span>
+                                <span style="color: red;">{{ Auth::user()->name }}
+                                , welcome back it seems that you already logged in!</span><br>
+                                Proceed down to 
+                                <span class="caret"></span>
                             </a>
 
                             <ul class="dropdown-menu" role="menu">
                                 <li><a href="{{ url('/logout') }}"><i class="fa fa-btn fa-sign-out"></i>Logout</a></li>
-                                <li><a href="{{ url('/user_display/1') }}"><i class="fa fa-btn fa-sign-out"></i>User Access / General</a></li>
+                                <li><a href="{{ url('/user_search') }}"><i class="fa fa-btn fa-sign-out"></i>User Access / General</a></li>
                             </ul>
                             
                         </li>

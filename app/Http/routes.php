@@ -17,7 +17,8 @@
 
 
 Route::auth();
-
+use Illuminate\Support\Facades\Input;
+use App\Snippet;
 Route::get('/', 'PublicUserController@index');//ORIGINAL
 
 
@@ -37,6 +38,14 @@ Route::get('/user_edit/{id}','AdminUserController@edit');//USER SNIPPET EDIT
 
 Route::get('/user_display/{id}','HomeController@edit');
 
+Route::get('/user_search','NameSearchController@index');
 
 
 
+Route::any('/search',function(){
+    $q = Input::get ( 'q' );
+    $snippets = Snippet::where('name','LIKE','%'.$q.'%')->get();
+    if(count($snippets) > 0)
+        return view('user.name_search_result',compact('snippets'));
+    else return view ('errors.503')->withMessage('No Details found. Try to search again !');
+});

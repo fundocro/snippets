@@ -47,5 +47,34 @@ Route::any('/search',function(){
     $snippets = Snippet::where('name','LIKE','%'.$q.'%')->get();
     if(count($snippets) > 0)
         return view('user.name_search_result',compact('snippets'));
-    else return view ('errors.503')->withMessage('No Details found. Try to search again !');
+   else return view ('errors.504');//->withMessage('No Details found. Try to search again !');
 });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

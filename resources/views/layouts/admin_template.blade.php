@@ -148,7 +148,7 @@
                             </li>
                             
                             <li>
-                                <a href="/user_display/1">Show all Snippets</a>
+                                <a href="/user_search">Show all Snippets</a>
                             </li>
 
 

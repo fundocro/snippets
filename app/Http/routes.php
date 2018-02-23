@@ -25,9 +25,7 @@ Route::get('/', 'PublicUserController@index');//ORIGINAL
 Route::get('/user_delete', 'HomeController@index');//goes true home controller and Auth 
 
 
-//Route::get('/test',function(){
-//    return view('admin_template');
- //Route::resource('admin/users','AdminUserController');//admin/users - rest controlls the controller
+
 Route::resource('user_create','HomeController');
 Route::get('/user_create','HomeController@create');
 

@@ -29,33 +29,6 @@
     <h2>All Snippets Display:</h2>
 
 
-{{--
-        <div class="form-group" style="width:30%;">
-            {!!Form::label('search','Search:')!!}
-            {!!Form::text('search',null,['class'=>'form-control'])!!}
-        </div>
-        <div class="form-group">
-            {!!Form::submit('Search Snippets',['class'=>'btn btn-primary'])!!}
-        </div>
---}}
-
-{{--
-        <form action="name_search.blade.php" method="post" class="form-inline">
-                        <div class="form-group">
-                            <input type="text" name="name" class="form-control">
-                        </div>
-                        <div class="form-group">
-                            <input type="submit" class="btn-primary">
-                        </div>
-        </form>
---}}
-{{--need to make fucking controller and route--}}
-
-
-
-
-        
-    
     <div class="col-sm-6" style="float: right;">
         {!!Form::model($snippets,['method'=>'PATCH','action'=>['HomeController@update',$snippets->id]])!!}
 

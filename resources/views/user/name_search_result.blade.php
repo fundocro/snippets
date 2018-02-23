@@ -16,7 +16,6 @@
             </button>
             <p class="navbar-brand">User : {{Auth::user()->name}}</p>
 
-            
         </div>
         <!-- /.navbar-header -->
 
@@ -63,7 +62,7 @@
                     </thead>
 
                     @if($snippets)
-
+                    <?php echo count($snippets)." ".'snippets in base.';?>
                     <tbody>
                          @foreach($snippets as $snippet)
                         <tr>

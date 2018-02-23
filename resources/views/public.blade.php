@@ -29,19 +29,29 @@
                     <th>Snippet Body</th>
                   </tr>
                 </thead>
-            
                 @if($snippets)
             
+               <?php
+               
+                    echo count($snippets)." ".'snippets in base.'; 
+            
+                ?>
                 <tbody>
+                   
                      @foreach($snippets as $snippet)
+                    
+                        
                     <tr>
                        
                         <td>{{$snippet->id}}</td>
                         <td>{{$snippet->name}}</td>            
                         <td>{{$snippet->body}}</td>
-                       
-                    </tr> 
-                     @endforeach
+                        
+                    </tr>
+                        @if($snippet->id>20)
+                            @break
+                        @endif
+                    @endforeach
                 </tbody>
             
                 @endif

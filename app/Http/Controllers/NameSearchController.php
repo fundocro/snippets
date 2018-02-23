@@ -52,8 +52,7 @@ class NameSearchController extends Controller
      */
     public function show($id)
     {
-        $select=Snippets::$id;
-        return view('user.select',compact('select'));
+
     }
 
     /**

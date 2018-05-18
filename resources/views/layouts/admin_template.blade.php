@@ -155,17 +155,21 @@
                     </li>
                   
                     <li>
-                        <a href="#"><i class="fa fa-wrench fa-fw"></i> Resources Menu<span class="fa arrow"></span></a>
-                        <ul class="nav nav-second-level">
-                            
+          <a href="/resources_menu">
+          <i class="fa fa-wrench fa-fw"></i> Resources Menu
+            <span class="fa arrow"></span>
+          </a>
+          <ul class="nav nav-second-level">
+
 
 
                             <li>
                             <a href="#">Linux Terminal Commands</a>      
                             </li>
+
                             
                             <li>
-                                <a href="#">-</a>
+                                <a href="#">Bash Script</a>
                             </li>
                             
                             <li>

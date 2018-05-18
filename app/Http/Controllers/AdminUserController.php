@@ -19,6 +19,12 @@ class AdminUserController extends Controller
     {
         return view('admin.admin_index');
     }
+   
+    
+    public function combined()
+    {
+        return view('/user.user_combined');
+    }
 
     /**
      * Show the form for creating a new resource.

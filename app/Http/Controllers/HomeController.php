@@ -55,7 +55,8 @@ class HomeController extends Controller
         $user=Auth::user();
         
         $user->snippet()->create($formInput);
-        return redirect('/user_display/1');
+        //return redirect('/user_display/1');
+        return redirect('/user_search');
        
  
     }

@@ -39,6 +39,9 @@ Route::get('/user_display/{id}','HomeController@edit');
 Route::get('/user_search','NameSearchController@index');
 
 
+//Route::get('/resources_menu', 'AdminUserController@linux');
+//Route::get('/resources_menu', 'AdminUserController@script');
+Route::get('/resources_menu', 'AdminUserController@combined');
 
 Route::any('/search',function(){
     $q = Input::get ( 'q' );
